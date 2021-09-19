@@ -34,6 +34,10 @@ export const ProductsList = () => {
     history.push('/alterar-produto');
   }
 
+  function handleSeeProduct() {
+    history.push('/visualizar-produto/x');
+  }
+
   const handleRenderRow = () => {
     const itens = Array(10)
       .fill()
@@ -58,7 +62,7 @@ export const ProductsList = () => {
             <td data-label="Ativar/Desativar">
               <StatusIcon />
             </td>
-            <td data-label="Visualizar">
+            <td data-label="Visualizar" onClick={() => handleSeeProduct()}>
               <VisualizeIcon />
             </td>
           </tr>
@@ -90,7 +94,7 @@ export const ProductsList = () => {
                 <th>Status</th>
                 <th>Alterar</th>
                 <th>Ativar/Desativar</th>
-                <th>Ativar/Desativar</th>
+                <th>Visualizar</th>
               </tr>
             </thead>
             {handleRenderRow()}

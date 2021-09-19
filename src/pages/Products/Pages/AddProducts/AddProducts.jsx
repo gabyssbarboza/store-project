@@ -15,7 +15,7 @@ const AddProducts = () => {
   const history = useHistory();
 
   function handleBack() {
-    history.push('/produtos');
+    history.push('/');
   }
 
   return (
